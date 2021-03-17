@@ -1,0 +1,165 @@
+#wrapper {/*background-image:url(_bg.png);*/
+}
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity: 1;
+}
+}
+@-moz-keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity: 1;
+}
+}
+@keyframes fadeIn {
+from {
+opacity:0;
+}
+to {
+	opacity: 1;
+}
+}
+ @-webkit-keyframes growUp {
+from {
+opacity:0.4;
+opacity:0;
+}
+to {
+	width: 100%;
+	opacity: 1;
+}
+}
+@-moz-keyframes growUp {
+from {
+opacity:0.4;
+ width:0;
+}
+to {
+	width: 100%;
+	opacity: 1;
+}
+}
+@keyframes growUp {
+from {
+width:0;
+opacity:0.4;
+}
+to {
+	width: 100%;
+	opacity: 1;
+}
+}
+.grow-up {
+	-webkit-animation: growUp ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation: growUp ease-in 2;
+	animation: growUp ease-in 1;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (height: 100%)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-duration: 2.5s;
+	-moz-animation-duration: 2.5s;
+	animation-duration: 2.5s;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	animation-delay: 0.5s
+}
+.grow-up.one {
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+.fade-in {
+	opacity: 0;  /* make things invisible upon start */
+	-webkit-animation: fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+}
+.fade-in.one {
+	-webkit-animation-delay: 0.8s;
+	-moz-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+.fade-in.two {
+	-webkit-animation-delay: 1.8s;
+	-moz-animation-delay: 1.8s;
+	animation-delay: 1.8s;
+}
+.fade-in.three {
+	-webkit-animation-delay:3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+}
+.hand {
+	border: 0px solid #333;
+	position: absolute;
+	top: 285px;
+	right: 0;
+	width: 0;
+	max-width: 495px;
+}
+.design {
+	position: center;
+	height: 768px;
+	left: 0px;
+	position: absolute;
+	top: 0;
+	width: 1024px;
+}
+
+
+/*
+.txt1 {position: absolute;top:307px;left: 164px;}
+.txt2 {position: absolute;top: 443px;left: 164px;}
+.product {position: absolute;top: 162px;left: 833px;}
+*/
+
+.s4_move1 {
+	position: absolute!important;
+    top: 31px!important;
+    left: 18%!important;
+    width: 79%!important;
+}
+
+.s4_move2 {
+	position: absolute!important;
+    top: 337px!important;
+    left: 8%!important;
+    width: 35%!important;
+}
+
+.s4_move3 {
+	position: absolute!important;
+    top: 337px!important;
+    left: 53%!important;
+    width: 34%!important;
+}
+
+.s4_move4 {
+	position: absolute;
+	top: 418px;
+	left: 44%!important;
+}
+
+.s4_move5 {
+	position: absolute;
+	top: 418px;
+	left: 69%!important;
+}
+
+.s4_move6 {
+	position: absolute;
+	top: 690px;
+	left: 25%!important;
+}
