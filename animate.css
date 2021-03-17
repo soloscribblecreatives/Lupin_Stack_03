@@ -2012,6 +2012,7 @@ Copyright (c) 2015 Daniel Eden
   backface-visibility: visible !important;
   -webkit-animation-name: flipOutY;
   animation-name: flipOutY;
+ 
 }
 
 @-webkit-keyframes lightSpeedIn {
