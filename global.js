@@ -26,7 +26,7 @@ var currentContentNSlide ='';
 		localStorage.setItem("current",currentContentNSlide);
 		localStorage.setItem("currentslide",'1');
 	}
-
+	
 //custom slides changes ends here....
 
 /* currentContentNSlide = contentName+"_"+'1';
@@ -115,7 +115,7 @@ function touchHandler(e) {
 		//step 5:-
 		console.log("swiperight"+localStorage.getItem("currentslide"));
 		localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
-		//step 5 ends here
+		//step 5 ends here 
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -138,16 +138,16 @@ function touchHandler(e) {
 
 //step 6:-
 function toCaptureTime(page_id){
-
+	
 	var currentSlideNo = page_id;
 
 	var startTime = Date.now();
 
 
 	var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo);
-
+	
 	if(temp == null){
-
+		
 		if (currentSlideNo!=0){
 			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo ,startTime);
 
@@ -169,8 +169,8 @@ var newSlideTime = (newTime - existingTime);
 
 //to capture end time of slide in db format
 var endTimeInDBFormat = currentTimeInDatabaseFormat();
-//alert(endTimeInDBFormat);/*
-/*
+//alert(endTimeInDBFormat);/* 
+/* 
 alert('do calculations and update time====else==_EndTime_======'); */
 
 
@@ -195,15 +195,15 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 
 
 	var nextSlideNo = currentSlideNo + 1 ;
-
- }
-
-	if(nextSlideNo <= 11){//number 3 is number of total slides present
+	
+ } 
+ 
+	if(nextSlideNo <= 16){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
 		if(tempNext == null){
-
+			
 			if (nextSlideNo!=0)	{
 				var nextSlideStartTime =  Date.now();
 				localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo ,nextSlideStartTime);
@@ -214,7 +214,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 				//to capture start time of next slide in db format
 				var startTimeNextInDBFormat = currentTimeInDatabaseFormat();
 				//alert(startTimeNextInDBFormat);
-				/*
+				/* 
 				alert("+++else++_StartTime_++++currentSlideNo++++"+nextSlideNo); */
 				localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_"+nextSlideNo ,startTimeNextInDBFormat);
 			}
@@ -231,21 +231,21 @@ function go_nav(direction) {
 	//alert("+++++++++go_nav++++contentName++++++"+contentName);
 	//go_nav('b');right
 	//go_nav('f');left
-
+	
 //custom slide changes continues here....
-
+	
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' &&   localStorage.getItem("currentcustomslideflag") =='true'){
 
-
+			
 				var custcomslideid=parseInt(localStorage.getItem("currentcontentcustomslideId"));
-
-
+			
+				
 				var page_id =  custcomslideid;
 		}else{
-
+			
 				var page_id =  parseInt($("#wrapper").attr("rel"));
-		}
-
+		}	
+		
 //custom slide changes ends here....
 
 	//step 7:-
@@ -267,7 +267,7 @@ if(direction == 'b') {
 
 
 	}
-
+	
 //custom slide changes ends here....
 
 	else{
@@ -289,7 +289,7 @@ if(direction == 'b') {
 
 	}
 }else {
-
+	
 //custom slide changes continues here....
 
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
@@ -298,14 +298,14 @@ if(direction == 'b') {
 
 		window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
 	}
-
+	
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 11){
+	if(page_id <= 16){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 12){
+		if(page_id == 17){
             flag=1;
         }
 	}
@@ -358,7 +358,7 @@ var pg_content = set_pg_content(page_id);
 		$(".box8").click(function(event) {
 	 		open_page("",11)
 	 	});
-
+		
 	}
 	 checkClickThrough();
 }
@@ -373,7 +373,7 @@ function set_pg_content(pg_id){
 		//to checked previous slide has god end time...
 		var previousslideid=localStorage.getItem("previousslide");
 		toCaptureTime(previousslideid);
-
+		
 	}
 	toCaptureTime(pg_id);
 
@@ -384,28 +384,54 @@ $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
-		case 1:	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr01_02 animated fadeInLeft"><img src="slide1/2.png"></div><div class="scr01_03 animated fadeInRight animation-delay-750"><img src="slide1/3.png"></div></div><div class="scr01_04 animated bounceIn animation-delay-1200"><img src="slide1/4.png"></div><div class="scr01_05 animated tada animation-delay-1700"><img src="slide1/5.png"></div><div class="bg" id="bg"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 2: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02 animated zoomIn"><img src="slide2/2.png"></div><div class="scr02_03 animated fadeInRight animation-delay-750"><img src="slide2/3.png"></div><div class="scr02_04 animated fadeInLeft animation-delay-750"><img src="slide2/4.png"></div><div class="scr02_05 animated fadeInLeft animation-delay-750"><img src="slide2/5.png"></div><div class="scr02_06 animated fadeInRight animation-delay-750"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 3: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr03_02 animated zoomIn"><img src="slide3/2.png"></div><div class="scr03_03 animated flipInY animation-delay-750"><img src="slide3/3.png"></div></div><div class="bg" id="bg"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 4: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr04_02 animated slideInLeft"><img src="slide4/2.png"></div><div class="scr04_03 animated zoomIn animation-delay-750"><img src="slide4/3.png"></div><div class="scr04_04 animated bounceIn animation-delay-1200"><img src="slide4/4.png"></div></div><div class="bg" id="bg"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 5: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr05_02 animated zoomIn"><img src="slide5/2.png"></div><div class="scr05_03 animated fadeInRight animation-delay-750"><img src="slide5/3.png"></div></div><div class="bg" id="bg"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 6: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr06_02 animated slideInLeft"><img src="slide6/2.png"></div><div class="scr06_03 animated zoomIn animation-delay-750"><img src="slide6/3.png"></div><div class="scr06_04 animated bounceIn animation-delay-1200"><img src="slide6/4.png"></div></div><div class="bg" id="bg"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 7: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr07_02 animated zoomIn"><img src="slide7/2.png"></div><div class="scr07_03 animated fadeInRight animation-delay-750"><img src="slide7/3.png"></div></div><div class="bg" id="bg"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 8: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr08_02 animated zoomIn"><img src="slide8/2.png"></div><div class="scr08_03 animated flipInY animation-delay-750"><img src="slide8/3.png"></div></div><div class="bg" id="bg"><img src="slide8/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 9: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr09_02 animated zoomIn"><img src="slide9/2.png"></div><div class="scr09_03 animated fadeInRight animation-delay-1200"><img src="slide9/3.png"></div><div class="scr09_04 animated fadeInLeft animation-delay-1200"><img src="slide9/4.png"></div></div><div class="bg" id="bg"><img src="slide9/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 10: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr10_02 animated zoomIn"><img src="slide10/2.png"></div><div class="scr10_03 animated fadeInRight animation-delay-1200"><img src="slide10/3.png"></div></div><div class="bg" id="bg"><img src="slide10/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
-		case 11: content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr11_02 animated zoomIn"><img src="slide11/2.png"></div><div class="scr11_03 animated fadeInRight animation-delay-750"><img src="slide11/3.png"></div><div class="scr11_04 animated tada animation-delay-1200"><img src="slide11/4.png"></div></div><div class="bg" id="bg"><img src="slide11/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
+	case 1:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="1/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="2/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="3/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="4/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="5/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 6:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="6/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 7:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="7/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 8:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="8/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 9:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="9/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 10:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="10/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 11:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="11/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 12:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="12/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 13:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="13/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 14:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="14/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 15:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="15/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+	case 16:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="16/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;	
 }
 
 return content;
@@ -427,11 +453,9 @@ function open_page(url,page_id){
 		//to checked previous slide has god end time...
 		var slideid=localStorage.getItem("currentslide");
 		toCaptureTime(slideid);
-
+		
 	}
-
-
-
+	
 	// toCaptureTime(page_id);
 	 localStorage.setItem("currentslide",page_id);
 	 currentContentNSlide = currentContentId+"_"+contentName+"_"+page_id;
@@ -444,73 +468,52 @@ function open_page(url,page_id){
 
 	 	$("#main_content").html(pg_content);
 
-	 if(page_id==2){
-		 				 							$(".popup05_click_01").click(function(event) {
-		 							 					//open_page("",5)
-		 							 				})
-		 							 				$(".popup05_click_02").click(function(event) {
-		 							 					//open_page("",5)
-		 							 				})
-		 							 				$(".popup05_click_03").click(function(event) {
-		 							 					//open_page("",5)
-		 				 							})
-		 				 							$(".popup05_click_04").click(function(event) {
-														//open_page("",5)
-		 				 							})
+	 if(page_id==4){
+		$(".box2").click(function(event) {
+			open_page("",5)
+		});
+		$(".box3").click(function(event) {
+			open_page("",6)
+		});
+		$(".box4").click(function(event) {
+	 		open_page("",7)
+	 	});
+		$(".box5").click(function(event) {
+	 		open_page("",8)
+	 	});
+		$(".box6").click(function(event) {
+	 		open_page("",9)
+	 	});
+		$(".box7").click(function(event) {
+	 		open_page("",10)
+	 	});
+		$(".box8").click(function(event) {
+	 		open_page("",11)
+	 	});
+	 }
+	  checkClickThrough();
+	}
 
-		 				 }
-		 				  checkClickThrough();
-		 				}
+	function checkClickThrough(){
+	var currentslide=localStorage.getItem("currentslide");
+	//alert(currentslide);
+	document.getElementById("click_through").innerHTML='';
 
-		 				function checkClickThrough(){
-		 				var currentslide=localStorage.getItem("currentslide");
-		 				//alert(currentslide);
-		 				document.getElementById("click_through").innerHTML='';
+	if(currentslide == 1){
+	document.getElementById("click_through").innerHTML='';
+		}
+    if(currentslide == 2){
+	document.getElementById("click_through").innerHTML='';
+		}
 
-		 				if(currentslide == 2){
-		 				document.getElementById("click_through").innerHTML='<div class="popup05_click_01" value="OK" onclick="checkBtns(2)"></div><div class="popup05_click_02" value="OK" onclick="checkBtns(3)"></div><div class="popup05_click_03" value="OK" onclick="checkBtns(4)"></div><div class="popup05_click_04" value="OK" onclick="checkBtns(5)"></div>';
-		 					}
+	}
 
-		 			}
-
-
-		 			function checkBtns(refNum){
-		 					switch(refNum){
-		 					case 2:
-		 					$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02"><img src="slide2/2.png"></div><div class="scr02_03"><img src="slide2/3.png"></div><div class="scr02_04"><img src="slide2/4.png"></div><div class="scr02_05"><img src="slide2/5.png"></div><div class="scr02_06"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="black-mask animated fadeIn"></div><div class="scr02_07 animated fadeIn"><img src="slide2/7.png"></div></div>');
-
-		 					//building click area
-		 					document.getElementById("click_through").innerHTML='<div class="popup05_close_btn animated fadeIn animation-delay-700" value="OK" onclick="checkBtns(6)"></div>';
-		 					break;
-
-							case 3:
-		 					$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02"><img src="slide2/2.png"></div><div class="scr02_03"><img src="slide2/3.png"></div><div class="scr02_04"><img src="slide2/4.png"></div><div class="scr02_05"><img src="slide2/5.png"></div><div class="scr02_06"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="black-mask animated fadeIn"></div><div class="scr02_08 animated fadeIn"><img src="slide2/8.png"></div></div>');
-
-		 					//building click area
-		 					document.getElementById("click_through").innerHTML='<div class="popup05_close_btn animated fadeIn animation-delay-700" value="OK" onclick="checkBtns(6)"></div>';
-		 					break;
-
-		 					case 4:
-		 					$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02"><img src="slide2/2.png"></div><div class="scr02_03"><img src="slide2/3.png"></div><div class="scr02_04"><img src="slide2/4.png"></div><div class="scr02_05"><img src="slide2/5.png"></div><div class="scr02_06"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="black-mask animated fadeIn"></div><div class="scr02_09 animated fadeIn"><img src="slide2/9.png"></div></div>');
-
-		 					//building click area
-		 					document.getElementById("click_through").innerHTML='<div class="popup05_close_btn animated fadeIn animation-delay-700" value="OK" onclick="checkBtns(6)"></div>';
-		 					break;
-
-							case 5:
-		 					$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02"><img src="slide2/2.png"></div><div class="scr02_03"><img src="slide2/3.png"></div><div class="scr02_04"><img src="slide2/4.png"></div><div class="scr02_05"><img src="slide2/5.png"></div><div class="scr02_06"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div><div class="black-mask animated fadeIn"></div><div class="scr02_10 animated fadeIn"><img src="slide2/10.png"></div></div>');
-
-		 					//building click area
-		 					document.getElementById("click_through").innerHTML='<div class="popup05_close_btn animated fadeIn animation-delay-700" value="OK" onclick="checkBtns(6)"></div>';
-		 					break;
-
-		 					case 6:
-		 					$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="container"><div class="scr02_02"><img src="slide2/2.png"></div><div class="scr02_03"><img src="slide2/3.png"></div><div class="scr02_04"><img src="slide2/4.png"></div><div class="scr02_05"><img src="slide2/5.png"></div><div class="scr02_06"><img src="slide2/6.png"></div></div><div class="bg" id="bg"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>');
-
-		 					//building click area
-		 					document.getElementById("click_through").innerHTML='<div class="popup05_click_01" value="OK" onclick="checkBtns(2)"></div><div class="popup05_click_02" value="OK" onclick="checkBtns(3)"></div><div class="popup05_click_03" value="OK" onclick="checkBtns(4)"></div><div class="popup05_click_04" value="OK" onclick="checkBtns(5)"></div>';
-		 					break;
-		 				}
+	function checkBtns(refNum){
+		switch(refNum){
+			case 1:
+			open_page('',1);
+            break;
+		}
 	}
 
 	function currentSlide(){
@@ -569,5 +572,3 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
-
-
