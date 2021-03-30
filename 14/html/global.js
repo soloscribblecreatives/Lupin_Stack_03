@@ -12,8 +12,8 @@ var currentContentNSlide ='';
 //alert("++++++++++++"+custcomslideflag1+"+++++++custcomslideid+++++++"+custcomslideid1);
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' &&  localStorage.getItem("currentcustomslideflag") =='true'){
 		var custcomslideid1=parseInt(localStorage.getItem("currentcontentcustomslideId"));
-		
 		//step 2:
+
 		currentContentNSlide = currentContentId+"_"+contentName+"_"+custcomslideid1;
 		//step 2 ends here
 		localStorage.setItem("current",currentContentNSlide);
@@ -99,7 +99,6 @@ function touchHandler(e) {
 		console.log("swipeleft"+localStorage.getItem("currentslide"));
 		localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
 		//step 4 ends here
-
 		//alert("swipeleft");
 		//myconsole("swipeleft");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -117,7 +116,6 @@ function touchHandler(e) {
 		console.log("swiperight"+localStorage.getItem("currentslide"));
 		localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
 		//step 5 ends here 
-
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -136,10 +134,7 @@ function touchHandler(e) {
         //Default is 75px, set to 0 for demo so any distance triggers swipe
          threshold:0
 	});
-
-
 });
-
 
 //step 6:-
 function toCaptureTime(page_id){
@@ -154,31 +149,39 @@ function toCaptureTime(page_id){
 	if(temp == null){
 		
 		if (currentSlideNo!=0){
-
-
-
 			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo ,startTime);
 
 			//to capture start time of slide in db format
 			var startTimeInDBFormat = currentTimeInDatabaseFormat();
 			//alert(startTimeInDBFormat);
 
-
-
-
 			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_"+currentSlideNo ,startTimeInDBFormat);
 		}
 }
 else
 {
+
 var existingTime = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+currentSlideNo);
 var newTime = Date.now();
 var newSlideTime = (newTime - existingTime);
+
+// alert(currentSlideNo + " slide time : " + (newSlideTime/1000) ); // time taken to view that particular slide
+
+//to capture end time of slide in db format
 var endTimeInDBFormat = currentTimeInDatabaseFormat();
+//alert(endTimeInDBFormat);/* 
+/* 
+alert('do calculations and update time====else==_EndTime_======'); */
+
+
 var EndTimeNext = localStorage.getItem(currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo);
 console.log("++++++++EndTimeNext++++++++"+EndTimeNext+"++++++currentContentId+++"+currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo);
 if(EndTimeNext == null){
+	//this time for which the slide was viewed
+
+
 localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_"+currentSlideNo ,(newSlideTime/1000) );
+
 
 localStorage.setItem(currentContentId+"_"+contentName+"_EndTime_"+currentSlideNo ,endTimeInDBFormat);
 }
@@ -190,10 +193,12 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 
 }else{
 
+
 	var nextSlideNo = currentSlideNo + 1 ;
 	
  } 
-	if(nextSlideNo <= 1){//number 3 is number of total slides present
+ 
+	if(nextSlideNo <= 2){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -203,28 +208,38 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 				var nextSlideStartTime =  Date.now();
 				localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo ,nextSlideStartTime);
 				localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_"+nextSlideNo ,0);
+
+
+
 				//to capture start time of next slide in db format
 				var startTimeNextInDBFormat = currentTimeInDatabaseFormat();
+				//alert(startTimeNextInDBFormat);
+				/* 
+				alert("+++else++_StartTime_++++currentSlideNo++++"+nextSlideNo); */
 				localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_"+nextSlideNo ,startTimeNextInDBFormat);
 			}
 		}
 	}
 }
 
-
 }
-//step 6 ends here ..
+//step ends..
 
 
 function go_nav(direction) {
-
+	//alert("+++++++++go_nav++++++++++"+direction);
+	//alert("+++++++++go_nav++++contentName++++++"+contentName);
+	//go_nav('b');right
+	//go_nav('f');left
 	
 //custom slide changes continues here....
 	
 	if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' &&   localStorage.getItem("currentcustomslideflag") =='true'){
 
+			
 				var custcomslideid=parseInt(localStorage.getItem("currentcontentcustomslideId"));
 			
+				
 				var page_id =  custcomslideid;
 		}else{
 			
@@ -237,7 +252,7 @@ function go_nav(direction) {
 	//toCaptureTime(page_id);
 	console.log("swipeleft"+localStorage.getItem("currentslide"));
 	localStorage.setItem("previousslide",localStorage.getItem("currentslide"));
-	//step 7 ends here 
+	//step 7 ends here
 //localStorage.setItem(contentName+"_slideNo_"+currentSlideNo ,n);
 var flag=0;
 if(direction == 'b') {
@@ -251,18 +266,28 @@ if(direction == 'b') {
 		window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
 
 
-	}else{
-	if(page_id == 1){
-	localStorage.setItem("gotoNextPrevBrand" ,2);//if one than next if 2 than prev
-	window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
-
-
-}else{
-	localStorage.setItem("gotoNextPrevBrand" ,0);//if one than next if 2 than prev
-}
-}
+	}
 	
 //custom slide changes ends here....
+
+	else{
+	if(page_id >= 0){
+		page_id = page_id - 1;
+		//alert(page_id);
+		//console.log(page_id);
+		if(page_id == 0){
+            flag=2;
+        }
+	}
+	 if(flag == 2){
+        localStorage.setItem("gotoNextPrevBrand" ,2);//if one than next if 2 than prev
+        //flag == 0;
+		window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
+    }else{
+        localStorage.setItem("gotoNextPrevBrand" ,0);
+    }
+
+	}
 }else {
 	
 //custom slide changes continues here....
@@ -275,21 +300,28 @@ if(direction == 'b') {
 	}
 	
 //custom slide changes ends here....
-else{
-	if(page_id == 1){
-	 localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
-	 window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
-}else{
 
-
-
-	localStorage.setItem("gotoNextPrevBrand" ,0);//if one than next if 2 than prev
-}
+	else{
+	if(page_id <= 2){
+		page_id = page_id + 1;
+		//alert(page_id);
+		if(page_id == 3){
+            flag=1;
+        }
 	}
+	    if(flag == 1){
+        localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+         flag == 0;
+		 window.location = "js-call:" + "1" + ":" + encodeURIComponent(JSON.stringify({query:'NODATA', type:'brandNavigation', callback:'checkLastPgFn'}));
+    }else{
+        localStorage.setItem("gotoNextPrevBrand" ,0);
+    }
+
 }
+}
+
 
 //step 8:
-
 currentContentNSlide = currentContentId+"_"+contentName+"_"+page_id;
 //step 8 ends here
 localStorage.setItem("current",currentContentNSlide);
@@ -332,7 +364,10 @@ var pg_content = set_pg_content(page_id);
 }
 
 function set_pg_content(pg_id){
-//alert("++++++++++set_pg_content++++++++++"+pg_id);
+//step 6:-
+//console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
+		 //check previous slide id end time capture...@bramha..
+		 //check previous slide id end time capture...@bramha..
 	//step 9:
 	if (typeof(localStorage.getItem("previousslide"))!='undefined'){
 		//to checked previous slide has god end time...
@@ -341,7 +376,10 @@ function set_pg_content(pg_id){
 		
 	}
 	toCaptureTime(pg_id);
+
+
 	//step 9 ends here..
+//alert("++++++++++set_pg_content++++++++++"+pg_id);
 $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
@@ -349,7 +387,9 @@ switch(pg_id){
 	case 1:
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
-
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
 }
 
 return content;
@@ -363,13 +403,15 @@ function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
 
+
 function open_page(url,page_id){
 	 // alert(page_id);
 	//step 10:
 	if (typeof(localStorage.getItem("currentslide"))!='undefined'){
 		//to checked previous slide has god end time...
 		var slideid=localStorage.getItem("currentslide");
-		toCaptureTime(slideid);	
+		toCaptureTime(slideid);
+		
 	}
 	
 	// toCaptureTime(page_id);
@@ -421,6 +463,7 @@ function open_page(url,page_id){
     if(currentslide == 2){
 	document.getElementById("click_through").innerHTML='';
 		}
+
 	}
 
 	function checkBtns(refNum){
@@ -476,8 +519,6 @@ function currentTimeInDatabaseFormat(){//to get current time in dd-mm-yyyy hh:mm
 	var duration= year+"-"+month+"-"+date+"-"+hour + ":" + minutes + ":" + seconds;
 	return duration;
 }
-
-// new js
 
 $(document).ready(function(){
 	$('body').on('click','.touchbtn',function(){

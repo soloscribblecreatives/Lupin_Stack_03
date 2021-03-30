@@ -26,6 +26,7 @@
     <div class="box">
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+          <div class="slides"><img src="thumbs/02.png" alt=""></div>   
       </div>
     </div>
     <div class="box_btn"></div>
@@ -36,17 +37,16 @@
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 var startTime = Date.now();
-
 //step 1:
 var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
 	
-	if(temp == null){
-		localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
-		localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
-		//to capture start time of 1st slide in db format
-		var startTime1InDBFormat = currentTimeInDatabaseFormat();
-		//alert(startTime1InDBFormat);
-		localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
+	if(temp == null){			
+			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+			//to capture start time of 1st slide in db format
+			var startTime1InDBFormat = currentTimeInDatabaseFormat();
+			//alert(startTime1InDBFormat);
+			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);	
 	}
 //step 1 ends here..
 
@@ -63,9 +63,12 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
 	switch(custcomslideid){
-		case 1:
-		content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
-		break;
+	case 1:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
+	case 2:
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	break;
 	}
 
 	$("#main_content").html(content);
@@ -76,9 +79,7 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 }else{
 
 $("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>');
-
 }
-
 });
 </script> 
 

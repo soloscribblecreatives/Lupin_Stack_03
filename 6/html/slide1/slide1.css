@@ -13,45 +13,36 @@
 .s1_2 {
   position: absolute;
   left: -55px;
-  top: 504px;
+  top: 530px;
   width: 239px;
   height: 92px;
   transition-delay: 0.5s;
-  transition-duration: 4s;
-  transform: translate(900px, 300px);
-  animation: fadeOut 0.5s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  transition-duration: 3s;
+  transform: translate(250px, 75px);
   z-index: 6;
 }
 
 .s1_3 {
   position: absolute;
   left: -56px;
-  top: 501px;
+  top: 515px;
   width: 251px;
   height: 25px;
   transition-delay: 0.5s;
-  transition-duration: 4s;
-  transform: translate(900px);
-  animation: fadeOut 0.5s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  transition-duration: 3s;
+  transform: translate(250px);
   z-index: 7;
 }
 
 .s1_4 {
   position: absolute;
   left: -53px;
-  top: 431px;
+  top: 435px;
   width: 238px;
   height: 90px;
   transition-delay: 0.5s;
-  transition-duration: 4s;
-  transform: translate(900px, -300px);
-  animation: fadeOut 0.5s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  transition-duration: 3s;
+  transform: translate(250px, -90px);
   z-index: 8;
 }
 
