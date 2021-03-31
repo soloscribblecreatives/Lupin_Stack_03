@@ -41,11 +41,11 @@
 
 .s1_6 {
 	position: absolute;
-	left: 43px;
+	left: 46px;
 	top: 592px;
 	width: 49px;
 	height: 59px;
-	animation: flash 3s infinite;
+	animation: flash 4s infinite;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
@@ -53,11 +53,11 @@
 
 .s1_7 {
 	position: absolute;
-	left: 704px;
+	left: 707px;
 	top: 592px;
 	width: 49px;
 	height: 59px;
-	animation: flash 3s infinite;
+	animation: flash 4s infinite;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
@@ -65,11 +65,11 @@
 
 .s1_8 {
 	position: absolute;
-	left: 43px;
+	left: 46px;
 	top: 476px;
 	width: 49px;
 	height: 59px;
-	animation: flash 3s infinite;
+	animation: flash 4s infinite;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
@@ -77,11 +77,11 @@
 
 .s1_9 {
 	position: absolute;
-	left: 704px;
+	left: 707px;
 	top: 476px;
 	width: 49px;
 	height: 59px;
-	animation: flash 3s infinite;
+	animation: flash 4s infinite;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
