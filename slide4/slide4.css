@@ -14,7 +14,7 @@
 	position: absolute;
 	left: 193px;
     top: 63px;
-	animation: bounceInDown 1s;
+	animation: flipInX 0.5s;
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;

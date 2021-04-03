@@ -38,7 +38,7 @@
 	width: 269px;
 	animation: rotating 20s infinite;
 	transform-origin: 50% 50%;
-	animation-delay: 1.5s;
+	animation-delay: 0.7s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
@@ -51,7 +51,7 @@
     height: 191px;
 	animation: rotatingUlta 10s infinite;
 	transform-origin: 50% 50%;
-	animation-delay: 1.5s;
+	animation-delay: 0.7s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
@@ -61,7 +61,7 @@
 	left: 637.5px;
 	top: 341.35px;
 	animation: zoomInOut 5s infinite;
-	animation-delay: 2.5s;
+	animation-delay: 2s;
 	animation-fill-mode: both;
 	z-index: 3;
 }

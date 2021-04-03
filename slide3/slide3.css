@@ -34,7 +34,7 @@
 	position: absolute;
 	left: 210px;
     top: 499px;
-	animation: bounceInUp 1s;
+	animation: flipInX 0.5s;
 	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 3;
