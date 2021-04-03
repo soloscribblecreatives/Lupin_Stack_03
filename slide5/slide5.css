@@ -1,0 +1,23 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s5_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s5_2 {
+	position: absolute;
+	left: 528px;
+	top: 446px;
+	width: 451px;
+	height: 111px;
+  	animation: fadeInRight 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+    z-index: 2;
+}

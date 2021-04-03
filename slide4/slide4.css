@@ -1,0 +1,77 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s4_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s4_2 {
+	position: absolute;
+	left: 193px;
+    top: 63px;
+	animation: bounceInDown 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+
+.s4_3 {
+	position: absolute;
+	left: 369px;
+    top: 215px;
+	animation: stampIn 0.2s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+.s4_4 {
+	position: absolute;
+	left: 86px;
+    top: 532px;
+	animation: backInUp 0.8s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+@-webkit-keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes stampIn {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform-origin: 50% 50%;
+		transform: scale(3);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.stampIn {
+	-webkit-animation-name: stampIn;
+	animation-name: stampIn;
+}

@@ -1,0 +1,41 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.s3_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s3_2 {
+	position: absolute;
+	left: 170px;
+    top: 161px;
+	animation: bounceInDown 0.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s3_3 {
+	position: absolute;
+	left: 167px;
+    top: 285px;
+	animation: fadeInUp 1s;
+	animation-delay: 1.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
+
+.s3_4 {
+	position: absolute;
+	left: 210px;
+    top: 499px;
+	animation: bounceInUp 1s;
+	animation-delay: 2.5s;
+	animation-fill-mode: both;
+	z-index: 3;
+}
