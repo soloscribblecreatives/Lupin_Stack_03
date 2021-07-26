@@ -22,8 +22,5 @@
 
 .logo {
   position: absolute;
-  animation: fadeInDown 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
   z-index: 4;
 }

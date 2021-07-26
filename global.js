@@ -388,13 +388,13 @@ switch(pg_id){
 	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/s1_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide2/s2_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide2/s2_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide2/s1_2.gif" alt=""></div></div>';
 	break;
     case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/s3_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/s3_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide3/s1_2.gif" alt=""></div></div>';
 	break;
     case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide4/s4_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide4/s4_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide4/s1_2.gif" alt=""></div></div>';
 	break;
 }
 
