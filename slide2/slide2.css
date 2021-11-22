@@ -1,21 +1,21 @@
 *{
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.s1_1 {
+.s2_1 {
   position: absolute;
   width: 1024px;
   height: 768px;
   z-index: 1;
 }
 
-.s1_2 {
+.s2_2 {
   position: absolute;
   left: 329px;
-  top: 42px;
-  width: 530px;
-  height: 166px;
+  top: 47px;
+  width: 538px;
+  height: 162px;
   animation: flipInX 0.3s;
   animation-delay: 0.2s;
   animation-fill-mode: both;

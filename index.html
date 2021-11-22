@@ -26,9 +26,7 @@
     <div class="box">
       <div class="slide_jumper">
 		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
-          <div class="slides"><img src="thumbs/02.png" alt=""></div>
-          <div class="slides"><img src="thumbs/03.png" alt=""></div>
-          <div class="slides"><img src="thumbs/04.png" alt=""></div>     
+          <div class="slides"><img src="thumbs/02.png" alt=""></div>   
       </div>
     </div>
     <div class="box_btn"></div>
@@ -66,16 +64,10 @@ if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && local
 	
 switch(custcomslideid){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/s1_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768"/></div><div class="s1_2"><img src="slide1/s1_2.gif"/></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide2/s2_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
-	break;
-    case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/s3_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
-	break;
-    case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide4/s4_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png" width="1024" height="768"/></div><div class="s2_2"><img src="slide2/s2_2.gif"/></div><div class="s2_pop1" onclick="s2_pop1()"></div><div class="s2_c1ose1" onclick="s2_close1()"></div>';
 	break;
 }
 
@@ -86,7 +78,7 @@ switch(custcomslideid){
 	 
 }else{
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/s1_1.jpg" width="1024" height="768" alt=""></div><div class="mask"><div class="logo"><img src="slide1/s1_2.gif" alt=""></div></div>');
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768"/></div><div class="s1_2"><img src="slide1/s1_2.gif"/></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div>');
 }
 });
 </script> 
