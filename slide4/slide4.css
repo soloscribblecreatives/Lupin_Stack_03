@@ -1,0 +1,59 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.s4_1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s4_2 {
+  position: absolute;
+  left: 207px;
+  top: 126px;
+  width: 628px;
+  height: 188px;
+  animation: fadeInUp 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  z-index: 4;
+}
+
+.s4_3 {
+  position: absolute;
+  left: 203px;
+  top: 384px;
+  width: 637px;
+  height: 96px;
+  animation: fadeInLeft 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  z-index: 4;
+}
+
+.s4_4 {
+  position: absolute;
+  left: 204px;
+  top: 540px;
+  width: 498px;
+  height: 96px;
+  animation: fadeInRight 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  z-index: 4;
+}
+
+.s4_5 {
+  position: absolute;
+  left: 283px;
+  top: 364px;
+  width: 451px;
+  height: 284px;
+  animation: zoomIn 1s;
+  animation-delay: 3.5s;
+  animation-fill-mode: both;
+  z-index: 4;
+}
