@@ -385,7 +385,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="playAudio" onclick="playMyAudio()"></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_6.png"></div><div class="s1_7"><img src="slide1/s1_6.png"></div><div class="s1_8"><img src="slide1/s1_6.png"></div><div class="s1_9"><img src="slide1/s1_6.png"></div><div class="option1" onclick="option1()"></div><div class="option2" onclick="option2()"></div><div class="option3" onclick="option3()"></div><div class="option4" onclick="option4()"></div><audio id="myAudio"><source src="slide1/Nehru.mp3" type="audio/mpeg"></audio>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="playAudio" onclick="playMyAudio()"></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_6.png"></div><div class="s1_7"><img src="slide1/s1_7.png"></div><div class="s1_8"><img src="slide1/s1_7.png"></div><div class="s1_9"><img src="slide1/s1_7.png"></div><div class="option1" onclick="option1()"></div><div class="option2" onclick="option2()"></div><div class="option3" onclick="option3()"></div><div class="option4" onclick="option4()"></div><audio id="myAudio"><source src="slide1/Nehru.mp3" type="audio/mpeg"></audio><audio id="correct"><source src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong"><source src="slide1/Wrong.mp3" type="audio/mpeg"></audio>';
 	break;
 	case 2:
 	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
@@ -552,6 +552,7 @@ function playMyAudio() {
 }
 
 function option1() {
+	document.getElementById("correct").play();
 	$('.s1_4').css("display","block");
 	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","block");
@@ -566,6 +567,7 @@ function option1() {
 }
 
 function option2() {
+	document.getElementById("wrong").play();
 	$('.s1_4').css("display","block");
 	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
@@ -580,6 +582,7 @@ function option2() {
 }
 
 function option3() {
+	document.getElementById("wrong").play();
 	$('.s1_4').css("display","block");
 	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
@@ -594,6 +597,7 @@ function option3() {
 }
 
 function option4() {
+	document.getElementById("wrong").play();
 	$('.s1_4').css("display","block");
 	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
