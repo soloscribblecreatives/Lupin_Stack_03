@@ -546,6 +546,8 @@ function playMyAudio() {
 	  $('.option2').css("display","block");
 	  $('.option3').css("display","block");
 	  $('.option4').css("display","block");
+	  $('.playAudio').css("display","none");
+	  $('.s1_3').addClass('s1_3_stop');
 	};
 }
 

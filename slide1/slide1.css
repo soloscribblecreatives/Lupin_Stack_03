@@ -35,6 +35,18 @@
 	z-index: 6;
 }
 
+.s1_3_stop {
+	position: absolute;
+  left: 453px;
+  top: 280px;
+  width: 118px;
+  height: 118px;
+    animation: none 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+	z-index: 6;
+}
+
 .s1_4 {
 	position: absolute;
   left: 389px;
@@ -177,5 +189,6 @@
   top: 280px;
   width: 118px;
   height: 118px;
+  border: 2px solid red;
   z-index: 50;
 }
