@@ -560,7 +560,7 @@ function option1() {
 	$('.s1_8').css("display","none");
 	$('.s1_9').css("display","none");
 	
-    $('.option1').css("display","none");
+	$('.option1').css("display","none");
     $('.option2').css("display","none");
     $('.option3').css("display","none");
     $('.option4').css("display","none");
@@ -568,45 +568,24 @@ function option1() {
 
 function option2() {
 	document.getElementById("wrong").play();
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","block");
 	$('.s1_8').css("display","none");
 	$('.s1_9').css("display","none");
-	
-	$('.option1').css("display","none");
-    $('.option2').css("display","none");
-    $('.option3').css("display","none");
-    $('.option4').css("display","none");
 }
 
 function option3() {
 	document.getElementById("wrong").play();
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","none");
 	$('.s1_8').css("display","block");
 	$('.s1_9').css("display","none");
-	
-	$('.option1').css("display","none");
-    $('.option2').css("display","none");
-    $('.option3').css("display","none");
-    $('.option4').css("display","none");
 }
 
 function option4() {
 	document.getElementById("wrong").play();
-	$('.s1_4').css("display","block");
-	$('.s1_5').css("display","block");
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","none");
 	$('.s1_8').css("display","none");
 	$('.s1_9').css("display","block");
-	
-	$('.option1').css("display","none");
-    $('.option2').css("display","none");
-    $('.option3').css("display","none");
-    $('.option4').css("display","none");
 }
