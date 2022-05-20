@@ -554,18 +554,15 @@ function hidesubmitonclick()
 
 
 function playMyAudio() {
-  document.getElementById("myAudio").play();
-	document.getElementById("myAudio").onended = function() {
-	  $('#radio01').css("display","block");
-	  $('#radio02').css("display","block");
-	  $('#radio03').css("display","block");
-	  $('#radio04').css("display","block");
-	  $('.playAudio').css("display","none");
-	  $('.s1_3').addClass('s1_3_stop');
-	};
+	document.getElementById("myAudio").play();
+	$('#radio01').css("display","block");
+    $('#radio02').css("display","block");
+    $('#radio03').css("display","block");
+    $('#radio04').css("display","block");
 }
 
 function option1() {
+	document.getElementById("myAudio").pause();
 	document.getElementById("correct").play();
 	$('.s1_4').css("display","block");
 	$('.s1_5').css("display","block");
@@ -579,31 +576,46 @@ function option1() {
 	$('#radio02').css("display","none");
 	$('#radio03').css("display","none");
 	$('#radio04').css("display","none");
+	
+    $('.playAudio').css("display","none");
+	$('.s1_3').addClass('s1_3_stop');
 }
 
 function option2() {
+	document.getElementById("myAudio").pause();
 	document.getElementById("wrong").play();
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","block");
 	$('.s1_8').css("display","none");
 	$('.s1_9').css("display","none");
 	$('.submit_button').css("display","none");
+	
+	$('.playAudio').css("display","none");
+	$('.s1_3').addClass('s1_3_stop');
 }
 
 function option3() {
+	document.getElementById("myAudio").pause();
 	document.getElementById("wrong").play();
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","none");
 	$('.s1_8').css("display","block");
 	$('.s1_9').css("display","none");
 	$('.submit_button').css("display","none");
+	
+	$('.playAudio').css("display","none");
+	$('.s1_3').addClass('s1_3_stop');
 }
 
 function option4() {
+	document.getElementById("myAudio").pause();
 	document.getElementById("wrong").play();
 	$('.s1_6').css("display","none");
 	$('.s1_7').css("display","none");
 	$('.s1_8').css("display","none");
 	$('.s1_9').css("display","block");
 	$('.submit_button').css("display","none");
+	
+	$('.playAudio').css("display","none");
+	$('.s1_3').addClass('s1_3_stop');
 }
