@@ -3,62 +3,62 @@
 	padding: 0px;
 }
 
-.s1_1 {
+.s5_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s1_2 {
+.s5_2 {
 	position: absolute;
-  left: 132px;
-  top: 255px;
-  width: 200px;
-  height: 307px;
-	animation: flash 1s infinite;
-	animation-delay: 0s;
+  left: 98px;
+  top: 51px;
+  width: 834px;
+  height: 229px;
+	animation: zoomIn 1s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
-.s1_3 {
+.s5_3 {
 	position: absolute;
-  left: 128px;
-  top: 272px;
-  width: 221px;
-  height: 285px;
-	animation: flash 0.5s infinite;
-	animation-delay: 0s;
+  left: 8px;
+  top: 302px;
+  width: 1016px;
+  height: 114px;
+	animation: fadeInRight 1s;
+	animation-delay: 1.5s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
-.s1_4 {
+.s5_4 {
 	position: absolute;
-  left: 572px;
-  top: 617px;
-  width: 452px;
-  height: 114px;
-	animation: fadeInRight 1s;
-	animation-delay: 1s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_5 {
-	position: absolute;
-  left: 546px;
-  top: 502px;
-  width: 311px;
-  height: 232px;
-	animation: fadeInRight 1s;
+  left: 5px;
+  top: 391px;
+  width: 412px;
+  height: 265px;
+	animation: fadeInLeft 1s;
 	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s1_6 {
+.s5_5 {
+	position: absolute;
+  left: 503px;
+  top: 438px;
+  width: 521px;
+  height: 280px;
+	animation: fadeInRight 1s;
+	animation-delay: 3.5s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s5_6 {
 	position: absolute;
   left: 725px;
   top: 282px;
@@ -70,7 +70,7 @@
 	z-index: 2;
 }
 
-.s1_7 {
+.s5_7 {
 	position: absolute;
   left: 82px;
   top: 366px;
@@ -82,7 +82,7 @@
 	z-index: 2;
 }
 
-.s1_8 {
+.s5_8 {
 	position: absolute;
   left: 516px;
   top: 321px;
@@ -95,7 +95,7 @@
 	z-index: 2;
 }
 
-.s1_9 {
+.s5_9 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -103,7 +103,7 @@
 	z-index: 10;
 }
 
-.s1_pop1 {
+.s5_pop1 {
 	position: absolute;
 	height: 100px;
 	width: 150px;
@@ -112,7 +112,7 @@
 	z-index: 15;
 }
 
-.s1_c1ose1 {
+.s5_c1ose1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;

@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="UTF-8"/>
-		<meta http-equiv="cache-control" content="max-age=200"/>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>Lupituss</title>
-		<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
-		<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
-		<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
-		<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
-		<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="max-age=200"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Starpress</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
+
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
 <div id="wrapper" rel="1">
+  <div class="menu"> <img src="menu.png" width="37" alt=""> </div>
   <div class="slide_arrow">
     <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
     <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
@@ -23,17 +25,22 @@
   <div class="reference active">
     <div class="box">
       <div class="slide_jumper">
-		<div class="slides"><img src="thumbs/01.png" alt=""></div>
-		<div class="slides"><img src="thumbs/02.png" alt=""></div>
-		<div class="slides"><img src="thumbs/03.png" alt=""></div>         
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
+          <div class="slides"><img src="thumbs/02.png" alt=""></div>
+          <div class="slides"><img src="thumbs/03.png" alt=""></div>
+          <div class="slides"><img src="thumbs/04.png" alt=""></div>
+          <div class="slides"><img src="thumbs/05.png" alt=""></div>
+          <div class="slides"><img src="thumbs/06.png" alt=""></div>
+          <div class="slides"><img src="thumbs/07.png" alt=""></div>
+          <div class="slides"><img src="thumbs/08.png" alt=""></div>
+          <div class="slides"><img src="thumbs/09.png" alt=""></div>
       </div>
     </div>
     <div class="box_btn"></div>
   </div>
-  <div id="myconsole"></div>
-  <div id="click_through" > </div>
 </div>
-
+<div id="myconsole"></div>
+<div id="click_through" > </div>
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
 var startTime = Date.now();
@@ -46,7 +53,7 @@ var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
 			//to capture start time of 1st slide in db format
 			var startTime1InDBFormat = currentTimeInDatabaseFormat();
 			//alert(startTime1InDBFormat);
-			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
+			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);	
 	}
 //step 1 ends here..
 
@@ -62,25 +69,44 @@ var selectedContentPath = 'slide1/';
 if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
 	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
 	
-	switch(custcomslideid){
+switch(custcomslideid){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="playAudio" onclick="playMyAudio()"></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_6.png"></div><div class="s1_7"><img src="slide1/s1_7.png"></div><div class="s1_8"><img src="slide1/s1_7.png"></div><div class="s1_9"><img src="slide1/s1_7.png"></div><audio id="myAudio"><source src="slide1/Nehru.mp3" type="audio/mpeg"></audio><audio id="correct"><source src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong"><source src="slide1/Wrong.mp3" type="audio/mpeg"></audio>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div><div class="s2_5"><img src="slide2/s2_5.png"/></div>';
 	break;
-    case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
+	case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="s3_1"><img src="slide3/s3_1.png" width="1024" height="768" alt=""></div><div class="s3_2"><img src="slide3/s3_2.png"/></div><div class="s3_3"><img src="slide3/s3_3.png"/></div><div class="s3_4"><img src="slide3/s3_4.png"/></div><div class="s3_5"><img src="slide3/s3_5.png"/></div>';
+	break;
+	case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s4_1"><img src="slide4/s4_1.png" width="1024" height="768" alt=""></div><div class="s4_2"><img src="slide4/s4_2.png"/></div><div class="s4_3"><img src="slide4/s4_3.png"/></div><div class="s4_4"><img src="slide4/s4_4.png"/></div><div class="s4_5"><img src="slide4/s4_5.png"/></div>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s5_1"><img src="slide5/s5_1.png" width="1024" height="768" alt=""></div><div class="s5_2"><img src="slide5/s5_2.png"/></div><div class="s5_3"><img src="slide5/s5_3.png"/></div><div class="s5_4"><img src="slide5/s5_4.png"/></div><div class="s5_5"><img src="slide5/s5_5.png"/></div>';
+	break;
+	case 6:
+	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="s6_1"><img src="slide6/s6_1.png"/></div><div class="s6_2"><img src="slide6/s6_2.png"/></div><div class="s6_3"><img src="slide6/s6_3.png"/></div><div class="s6_4"><img src="slide6/s6_4.png"/></div><div class="s6_5"><img src="slide6/s6_5.png"/></div><div class="s6_6"><img src="slide6/s6_6.png"/></div><div class="s6_7"><img src="slide6/s6_7.png"/></div><div class="s6_pop1" onclick="s6_pop1()"></div><div class="s6_c1ose1" onclick="s6_close1()"></div>';
+	break;
+	case 7:
+	content='<link rel="stylesheet" type="text/css" href="slide7/slide7.css" media="screen"/><div class="s7_1"><img src="slide7/s7_1.png"/></div><div class="s7_2"><img src="slide7/s7_2.png"/></div><div class="s7_3"><img src="slide7/s7_3.png"/></div><div class="s7_4"><img src="slide7/s7_4.png"/></div><div class="s7_5"><img src="slide7/s7_5.png" width="1024" height="768" alt=""/></div><div class="s7_pop1" onclick="s7_pop1()"></div><div class="s7_c1ose1" onclick="s7_close1()"></div>';
+	break;
+	case 8:
+	content='<link rel="stylesheet" type="text/css" href="slide8/slide8.css" media="screen"/><div class="s8_1"><img src="slide8/s8_1.png" width="1024" height="768" alt=""></div><div class="s8_2"><img src="slide8/s8_2.png"/></div><div class="s8_3"><img src="slide8/s8_3.png"/></div><div class="s8_4"><img src="slide8/s8_4.png"/></div><div class="s8_5"><img src="slide8/s8_5.png"/></div>';
+	break;
+	case 9:
+	content='<link rel="stylesheet" type="text/css" href="slide9/slide9.css" media="screen"/><div class="s9_1"><img src="slide9/s9_1.png" width="1024" height="768" alt=""/></div><div class="s9_2"><img src="slide9/s9_2.png"/></div><div class="s9_3"><img src="slide9/s9_3.png"/></div><div class="s9_4"><img src="slide9/s9_4.png"/></div><div class="s9_5"><img src="slide9/s9_5.png"/></div><div class="s9_6"><img src="slide9/s9_6.png"/></div><div class="s9_7"><img src="slide9/s9_7.png"/></div><div class="s9_8"><img src="slide9/s9_8.png" width="1024" height="768" alt=""/></div><div class="s9_pop1" onclick="s9_pop1()"></div><div class="s9_c1ose1" onclick="s9_close1()"></div>';
 	break;
 }
 
 	$("#main_content").html(content);
-	 localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
 
 //custom slide additional code ends here....	 
 	 
 }else{
-	$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="playAudio" onclick="playMyAudio()"></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_6.png"></div><div class="s1_7"><img src="slide1/s1_7.png"></div><div class="s1_8"><img src="slide1/s1_7.png"></div><div class="s1_9"><img src="slide1/s1_7.png"></div><audio id="myAudio"><source src="slide1/Nehru.mp3" type="audio/mpeg"></audio><audio id="correct"><source src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong"><source src="slide1/Wrong.mp3" type="audio/mpeg"></audio>');
+
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_4"><img src="slide1/s1_4.png"/></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div>');
 }
 });
 </script> 

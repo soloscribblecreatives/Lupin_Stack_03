@@ -3,99 +3,86 @@
 	padding: 0px;
 }
 
-.s1_1 {
+.s9_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s1_2 {
+.s9_2 {
 	position: absolute;
-  left: 132px;
-  top: 255px;
-  width: 200px;
-  height: 307px;
-	animation: flash 1s infinite;
-	animation-delay: 0s;
+  left: 152px;
+  top: 54px;
+  width: 730px;
+  height: 262px;
+	animation: zoomIn 1s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 4;
 }
 
-.s1_3 {
+.s9_3 {
 	position: absolute;
-  left: 128px;
-  top: 272px;
-  width: 221px;
-  height: 285px;
-	animation: flash 0.5s infinite;
-	animation-delay: 0s;
+  left: 69px;
+  top: 383px;
+  width: 901px;
+  height: 279px;
+	animation: fadeInDownSmall 1s;
+	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 3;
 }
 
-.s1_4 {
+.s9_4 {
 	position: absolute;
-  left: 572px;
-  top: 617px;
-  width: 452px;
-  height: 114px;
-	animation: fadeInRight 1s;
-	animation-delay: 1s;
+  left: 54px;
+  top: 453px;
+  width: 420px;
+  height: 65px;
+	animation: flipInX 1s;
+	animation-delay: 1.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s1_5 {
+.s9_5 {
 	position: absolute;
-  left: 546px;
-  top: 502px;
-  width: 311px;
-  height: 232px;
-	animation: fadeInRight 1s;
+  left: 544px;
+  top: 453px;
+  width: 420px;
+  height: 65px;
+	animation: flipInX 1s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 2;
+}
+
+.s9_6 {
+	position: absolute;
+  left: 54px;
+  top: 596px;
+  width: 420px;
+  height: 64px;
+	animation: flipInX 1s;
 	animation-delay: 2.5s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s1_6 {
+.s9_7 {
 	position: absolute;
-  left: 725px;
-  top: 282px;
-  width: 303px;
-  height: 216px;
-	animation: fadeInRight 1s;
+  left: 544px;
+  top: 595px;
+  width: 420px;
+  height: 65px;
+	animation: flipInX 1s;
 	animation-delay: 3s;
 	animation-fill-mode: both;
 	z-index: 2;
 }
 
-.s1_7 {
-	position: absolute;
-  left: 82px;
-  top: 366px;
-  width: 883px;
-  height: 140px;
-	animation: fadeInDown 1s;
-	animation-delay: 4s;
-	animation-fill-mode: both;
-	z-index: 2;
-}
-
-.s1_8 {
-	position: absolute;
-  left: 516px;
-  top: 321px;
-  width: 144px;
-  height: 94px;
-	animation: pulse 1s infinite;
-	animation-delay: 4.5s;
-	animation-fill-mode: both;
-	opacity: 0;
-	z-index: 2;
-}
-
-.s1_9 {
+.s9_8 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
@@ -103,7 +90,7 @@
 	z-index: 10;
 }
 
-.s1_pop1 {
+.s9_pop1 {
 	position: absolute;
 	height: 100px;
 	width: 150px;
@@ -112,7 +99,7 @@
 	z-index: 15;
 }
 
-.s1_c1ose1 {
+.s9_c1ose1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
