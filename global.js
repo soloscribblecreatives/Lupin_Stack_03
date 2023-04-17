@@ -198,7 +198,7 @@ if (typeof(localStorage.getItem('currentslide'))!='undefined' && localStorage.ge
 	
  } 
  
-	if(nextSlideNo <= 9){//number 3 is number of total slides present
+	if(nextSlideNo <= 3){//number 3 is number of total slides present
 	// alert(nextSlideNo);
 	var tempNext = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_"+nextSlideNo);
 
@@ -302,10 +302,10 @@ if(direction == 'b') {
 //custom slide changes ends here....
 
 	else{
-	if(page_id <= 9){
+	if(page_id <= 7){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 10){
+		if(page_id == 8){
             flag=1;
         }
 	}
@@ -385,31 +385,25 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="s1_pop1" onclick="s1_pop1()"></div><div class="s1_c1ose1" onclick="s1_close1()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png"/></div><div class="s1_2"><img src="slide1/s1_2.png"/></div><div class="s1_3"><img src="slide1/s1_3.png"/></div><div class="option1" onclick="option1();"></div><div class="option2" onclick="option2();"></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png"/></div><div class="s2_2"><img src="slide2/s2_2.png"/></div><div class="s2_3"><img src="slide2/s2_3.png"/></div><div class="s2_4"><img src="slide2/s2_4.png"/></div><div class="s2_5"><img src="slide2/s2_5.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s2_1"><img src="slide2/s2_1.png" width="1024" height="768" alt=""></div><div class="s2_2"><img src="slide2/s2_2.png"></div>';
 	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="s3_1"><img src="slide3/s3_1.png" width="1024" height="768" alt=""></div><div class="s3_2"><img src="slide3/s3_2.png"/></div><div class="s3_3"><img src="slide3/s3_3.png"/></div><div class="s3_4"><img src="slide3/s3_4.png"/></div><div class="s3_5"><img src="slide3/s3_5.png"/></div>';
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="launch" onclick="blast();"><img src="slide3/8.png"/></div><div class="s3_1"><img src="slide3/1.png" width="1024" height="768"/></div><div class="s3_2"><img src="slide3/2.png"/></div><div class="s3_3"><img src="slide3/3.png"/></div><div class="s3_5"><img src="slide3/5.png"/></div><div class="s3_6"><img src="slide3/6.png"/></div><div class="s3_7"><img src="slide3/7.gif" width="1024" height="768"/></div>';
 	break;
 	case 4:
-	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s4_1"><img src="slide4/s4_1.png" width="1024" height="768" alt=""></div><div class="s4_2"><img src="slide4/s4_2.png"/></div><div class="s4_3"><img src="slide4/s4_3.png"/></div><div class="s4_4"><img src="slide4/s4_4.png"/></div><div class="s4_5"><img src="slide4/s4_5.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide4/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s5_1"><img src="slide5/s5_1.png" width="1024" height="768" alt=""></div><div class="s5_2"><img src="slide5/s5_2.png"/></div><div class="s5_3"><img src="slide5/s5_3.png"/></div><div class="s5_4"><img src="slide5/s5_4.png"/></div><div class="s5_5"><img src="slide5/s5_5.png"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide5/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 	case 6:
-	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="s6_1"><img src="slide6/s6_1.png"/></div><div class="s6_2"><img src="slide6/s6_2.png"/></div><div class="s6_3"><img src="slide6/s6_3.png"/></div><div class="s6_4"><img src="slide6/s6_4.png"/></div><div class="s6_5"><img src="slide6/s6_5.png"/></div><div class="s6_6"><img src="slide6/s6_6.png"/></div><div class="s6_7"><img src="slide6/s6_7.png"/></div><div class="s6_pop1" onclick="s6_pop1()"></div><div class="s6_c1ose1" onclick="s6_close1()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide6/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 	case 7:
-	content='<link rel="stylesheet" type="text/css" href="slide7/slide7.css" media="screen"/><div class="s7_1"><img src="slide7/s7_1.png"/></div><div class="s7_2"><img src="slide7/s7_2.png"/></div><div class="s7_3"><img src="slide7/s7_3.png"/></div><div class="s7_4"><img src="slide7/s7_4.png"/></div><div class="s7_5"><img src="slide7/s7_5.png" width="1024" height="768" alt=""/></div><div class="s7_pop1" onclick="s7_pop1()"></div><div class="s7_c1ose1" onclick="s7_close1()"></div>';
-	break;
-	case 8:
-	content='<link rel="stylesheet" type="text/css" href="slide8/slide8.css" media="screen"/><div class="s8_1"><img src="slide8/s8_1.png" width="1024" height="768" alt=""></div><div class="s8_2"><img src="slide8/s8_2.png"/></div><div class="s8_3"><img src="slide8/s8_3.png"/></div><div class="s8_4"><img src="slide8/s8_4.png"/></div><div class="s8_5"><img src="slide8/s8_5.png"/></div>';
-	break;
-	case 9:
-	content='<link rel="stylesheet" type="text/css" href="slide9/slide9.css" media="screen"/><div class="s9_1"><img src="slide9/s9_1.png" width="1024" height="768" alt=""/></div><div class="s9_2"><img src="slide9/s9_2.png"/></div><div class="s9_3"><img src="slide9/s9_3.png"/></div><div class="s9_4"><img src="slide9/s9_4.png"/></div><div class="s9_5"><img src="slide9/s9_5.png"/></div><div class="s9_6"><img src="slide9/s9_6.png"/></div><div class="s9_7"><img src="slide9/s9_7.png"/></div><div class="s9_8"><img src="slide9/s9_8.png" width="1024" height="768" alt=""/></div><div class="s9_pop1" onclick="s9_pop1()"></div><div class="s9_c1ose1" onclick="s9_close1()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide1.css" media="screen"/><div class="background"><img src="slide7/1.jpg" width="1024" height="768" alt=""></div>';
 	break;
 }
 
@@ -553,28 +547,28 @@ $(document).ready(function(){
 })
 
 
-//----------------------------------//
+/*--------------------- animation javascript -----------------------*/
 
-function s7_pop1() {
-	$('.s7_5').css("display","block");
-	$('.s7_c1ose1').css("display","block");
-	$('.s7_pop1').css("display","none");
+function option1() {
+	$('.s1_2').css("display","block");
+	$('.option1').css("display","none");
+	$('.option2').css("display","block");
 }
 
-function s7_close1() {
-	$('.s7_5').css("display","none");
-	$('.s7_c1ose1').css("display","none");
-	$('.s7_pop1').css("display","block");
+function option2() {
+	$('.s1_3').css("display","block");
+	$('.option1').css("display","none");
+	$('.option2').css("display","none");
 }
 
-function s9_pop1() {
-	$('.s9_8').css("display","block");
-	$('.s9_c1ose1').css("display","block");
-	$('.s9_pop1').css("display","none");
-}
-
-function s9_close1() {
-	$('.s9_8').css("display","none");
-	$('.s9_c1ose1').css("display","none");
-	$('.s9_pop1').css("display","block");
+function blast() {
+	$('.launch').css("display","none");
+	$('.s3_2').css("display","block");
+	$('.s3_3').css("display","block");
+	$('.s3_4').css("display","block");
+	$(".s3_5").addClass("s3_5_slide");
+	$(".s3_6").addClass("s3_6_slide");
+	setTimeout(function () {
+		$('.s3_7').css("display","block");
+	}, 3000);
 }
