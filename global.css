@@ -237,3 +237,51 @@ html[xmlns] .clearfix {
 	background-color: rgba(0,0,0,0.5);
 	color: #ffffff;
 }
+
+.clickWrap {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 10;
+}
+
+
+.click {
+	position: absolute;
+  left: 734px;
+  top: 454px;
+  width: 119px;
+  height: 125px;
+	animation: heartBeatSoft 2s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 8;
+}
+
+
+@keyframes heartBeatSoft {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
