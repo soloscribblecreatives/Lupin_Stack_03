@@ -38,20 +38,9 @@
   z-index: 5;
 }
 
-.option3 {
-  position: absolute;
-  left: 96px;
-  top: 390px;
-  width: 521px;
-  height: 59px;
-  animation: none 1s;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  display: none;
-  z-index: 5;
-}
 
-.option30 {
+
+.option3 {
   position: absolute;
   left: 316px;
   top: 390px;
