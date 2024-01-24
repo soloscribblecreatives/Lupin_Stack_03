@@ -690,7 +690,7 @@ function open_page2(url,page_id,count){
 	}
 	
 	if(page_id == 10){
-		document.getElementById("click_through").innerHTML='<div class="blocker"></div><div class="slide02_inline_wraper" id="buttons">\
+		document.getElementById("click_through").innerHTML='<div class="slide02_inline_wraper" id="buttons">\
 		<div id="slide01_question01_choices01" class="control-group">\
 			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_01" name="checkB01" value="Yes"/><div class="control_indicator" id="radio01" onclick="option1()"></div></label>\
 			<label class="control control_radio"><div class="lbl_pos"></div><input type="radio" id="slide01_radio01_02" name="checkB01" value="No"/><div class="control_indicator" id="radio02" onclick="option2()"></div></label>\
