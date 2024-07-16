@@ -12,172 +12,74 @@
 
 .s2 {
 	position: absolute;
-  left: 195px;
-  top: 57px;
-  width: 634px;
-  height: 79px;
-	animation: slideInUp 0.5s;
-	animation-delay: 0.2s;
+  left: 907px;
+  top: 705px;
+  width: 75px;
+  height: 26px;
+	animation: flashLong 1s infinite;
+	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s3 {
 	position: absolute;
-  left: 231px;
-  top: 165px;
-  width: 177px;
-  height: 62px;
-	animation: flip 0.5s;
-	animation-delay: 1s;
+  left: 52px;
+  top: 202px;
+  width: 280px;
+  height: 106px;
+	animation: zoomIn 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
+	transform-origin: bottom right;
 	z-index: 5;
 }
 
 .s4 {
 	position: absolute;
-  left: 325px;
-  top: 201px;
-  width: 290px;
-  height: 102px;
+  left: 229px;
+  top: 70px;
+  width: 599px;
+  height: 210px;
 	animation: zoomIn 0.5s;
-	animation-delay: 1.5s;
+	animation-delay: 1.2s;
 	animation-fill-mode: both;
+	transform-origin: bottom right;
 	z-index: 5;
 }
 
 .s5 {
 	position: absolute;
-  left: 608px;
-  top: 223px;
-  width: 128px;
-  height: 61px;
-	animation: fadeInRight 0.5s;
-	animation-delay: 1.7s;
+  left: 412px;
+  top: 303px;
+  width: 309px;
+  height: 92px;
+	animation: zoomIn 0.5s;
+	animation-delay: 2.2s;
 	animation-fill-mode: both;
+	transform-origin: top left;
 	z-index: 5;
 }
 
 .s6 {
 	position: absolute;
-  left: 334px;
-  top: 288px;
-  width: 281px;
-  height: 50px;
-	animation: fadeInUp 0.5s;
-	animation-delay: 2.5s;
+  left: 581px;
+  top: 425px;
+  width: 323px;
+  height: 181px;
+	animation: zoomIn 0.5s;
+	animation-delay: 3.2s;
 	animation-fill-mode: both;
+	transform-origin: top right;
 	z-index: 5;
 }
 
-.s7 {
-	position: absolute;
-  left: 320px;
-  top: 358px;
-  width: 75px;
-  height: 59px;
-	animation: fadeIn 0.2s;
-	animation-delay: 3.5s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s8 {
-	position: absolute;
-  left: 382px;
-  top: 372px;
-  width: 336px;
-  height: 40px;
-	animation: revealHorizontal 0.5s;
-	animation-delay: 4s;
-	animation-fill-mode: both;
-	clip: rect(0px,0px,50px,0px);
-	z-index: 5;
-}
-
-@keyframes revealHorizontal {
-  0% {
-    clip: rect(0px,0px,50px,0px);
-	opacity: 1;
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
   }
-  
-  100% {
-    clip: rect(0px,340px,50px,0px);
-	opacity: 1;
-  }
-}
 
-.s9 {
-	position: absolute;
-  left: 379px;
-  top: 379px;
-  width: 339px;
-  height: 26px;
-	animation: fadeInRight 0.5s;
-	animation-delay: 4s;
-	animation-fill-mode: both;
-	z-index: 10;
-}
-
-.s10 {
-	position: absolute;
-  left: 22px;
-  top: 456px;
-  width: 212px;
-  height: 241px;
-	animation: fadeInLeft 0.5s;
-	animation-delay: 5s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s11 {
-	position: absolute;
-  left: 178px;
-  top: 457px;
-  width: 776px;
-  height: 50px;
-	animation: revealHorizontalBig 1s;
-	animation-delay: 5.5s;
-	animation-fill-mode: both;
-	clip: rect(0px,0px,80px,0px);
-	z-index: 5;
-}
-
-.s12 {
-	position: absolute;
-  left: 231px;
-  top: 551px;
-  width: 723px;
-  height: 50px;
-	animation: revealHorizontalBig 1s;
-	animation-delay: 6s;
-	animation-fill-mode: both;
-	clip: rect(0px,0px,80px,0px);
-	z-index: 5;
-}
-
-.s13 {
-	position: absolute;
-  left: 178px;
-  top: 645px;
-  width: 776px;
-  height: 72px;
-	animation: revealHorizontalBig 1s;
-	animation-delay: 6.5s;
-	animation-fill-mode: both;
-	clip: rect(0px,0px,80px,0px);
-	z-index: 5;
-}
-
-@keyframes revealHorizontalBig {
-  0% {
-    clip: rect(0px,0px,80px,0px);
-	opacity: 1;
-  }
-  
-  100% {
-    clip: rect(0px,900px,80px,0px);
-	opacity: 1;
+  25%, 50%, 75% {
+    opacity: 1;
   }
 }

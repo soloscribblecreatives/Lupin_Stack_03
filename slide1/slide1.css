@@ -12,65 +12,61 @@
 
 .s2 {
 	position: absolute;
-  left: 582px;
-  top: 185px;
-  width: 282px;
-  height: 41px;
-	animation: slideInUp 0.5s;
-	animation-delay: 0.2s;
+  left: 917px;
+  top: 703px;
+  width: 69px;
+  height: 27px;
+	animation: flashLong 1s infinite;
+	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
 .s3 {
 	position: absolute;
-  left: 570px;
-  top: 269px;
-  width: 306px;
-  height: 118px;
+  left: 87px;
+  top: 122px;
+  width: 303px;
+  height: 200px;
 	animation: zoomIn 0.5s;
-	animation-delay: 0.5s;
+	animation-delay: 0.2s;
 	animation-fill-mode: both;
+	transform-origin: bottom right;
 	z-index: 5;
 }
 
 .s4 {
 	position: absolute;
-  left: 494px;
-  top: 405px;
-  width: 260px;
-  height: 363px;
-	animation: flipInYnew 0.5s;
-	animation-delay: 1.5s;
+  left: 50px;
+  top: 428px;
+  width: 280px;
+  height: 85px;
+	animation: zoomIn 0.5s;
+	animation-delay: 1.2s;
 	animation-fill-mode: both;
+	transform-origin: top right;
 	z-index: 5;
 }
 
 .s5 {
 	position: absolute;
-  left: 758px;
-  top: 405px;
-  width: 194px;
-  height: 363px;
-	animation: slideInRight 0.5s;
-	animation-delay: 2s;
+  left: 707px;
+  top: 127px;
+  width: 283px;
+  height: 181px;
+	animation: zoomIn 0.5s;
+	animation-delay: 2.2s;
 	animation-fill-mode: both;
+	transform-origin: bottom left;
 	z-index: 5;
 }
 
-
-@keyframes flipInYnew {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -90deg) scale(0.5);
-    transform: perspective(400px) rotate3d(0, 1, 0, -90deg)  scale(0.5);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+@keyframes flashLong {
+  0%,  100% {
+    opacity: 0;
   }
 
-  to {
-	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 0deg) scale(1);
-    transform: perspective(400px) rotate3d(0, 1, 0, 0deg) scale(1);
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+  25%, 50%, 75% {
+    opacity: 1;
   }
 }
