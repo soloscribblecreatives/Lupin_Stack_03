@@ -3,63 +3,169 @@
 	padding: 0px;
 }
 
-.s1 {
+.s1_1 {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
 	z-index: 1;
 }
 
-.s2 {
+.s1_2 {
 	position: absolute;
-  left: 917px;
-  top: 703px;
-  width: 69px;
-  height: 27px;
-	animation: flashLong 1s infinite;
-	animation-delay: 0s;
+  left: 632px;
+  top: 583px;
+  width: 278px;
+  height: 148px;
+	animation: zoomIn 0.7s;
+	animation-delay: 0.1s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
 
-.s3 {
+.s1_3 {
 	position: absolute;
-  left: 87px;
-  top: 122px;
-  width: 303px;
-  height: 200px;
-	animation: zoomIn 0.5s;
+  left: 620px;
+  top: 619px;
+  width: 301px;
+  height: 72px;
+	animation: zoomIn 0.7s;
 	animation-delay: 0.2s;
 	animation-fill-mode: both;
-	transform-origin: bottom right;
 	z-index: 5;
 }
 
-.s4 {
+.s1_4 {
 	position: absolute;
-  left: 50px;
-  top: 428px;
-  width: 280px;
-  height: 85px;
-	animation: zoomIn 0.5s;
-	animation-delay: 1.2s;
+  left: 534px;
+  top: 586px;
+  width: 181px;
+  height: 67px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 1.4s;
 	animation-fill-mode: both;
-	transform-origin: top right;
 	z-index: 5;
 }
 
-.s5 {
+.s1_5 {
 	position: absolute;
-  left: 707px;
-  top: 127px;
-  width: 283px;
-  height: 181px;
-	animation: zoomIn 0.5s;
+  left: 761px;
+  top: 588px;
+  width: 179px;
+  height: 65px;
+	animation: fadeInUp 0.7s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_6 {
+	position: absolute;
+  left: 252px;
+  top: 446px;
+  width: 173px;
+  height: 108px;
+	animation: fadeInDownSmall 0.5s;
+	animation-delay: 1.4s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_7 {
+	position: absolute;
+  left: 465px;
+  top: 272px;
+  width: 155px;
+  height: 155px;
+	animation: bounceIn 0.3s;
+	animation-delay: 1.8s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_8 {
+	position: absolute;
+  left: 488px;
+  top: 446px;
+  width: 109px;
+  height: 85px;
+	animation: fadeInDownSmall 0.5s;
 	animation-delay: 2.2s;
 	animation-fill-mode: both;
-	transform-origin: bottom left;
 	z-index: 5;
 }
+
+.s1_9 {
+	position: absolute;
+  left: 660px;
+  top: 272px;
+  width: 155px;
+  height: 155px;
+	animation: bounceIn 0.3s;
+	animation-delay: 2.6s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_10 {
+	position: absolute;
+  left: 682px;
+  top: 446px;
+  width: 118px;
+  height: 78px;
+	animation: fadeInDownSmall 0.5s;
+	animation-delay: 3s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_11 {
+	position: absolute;
+  left: 856px;
+  top: 272px;
+  width: 155px;
+  height: 155px;
+	animation: bounceIn 0.3s;
+	animation-delay: 3.4s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_12 {
+	position: absolute;
+  left: 871px;
+  top: 446px;
+  width: 125px;
+  height: 109px;
+	animation: fadeInDownSmall 0.5s;
+	animation-delay: 3.8s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_13 {
+	position: absolute;
+  left: 1051px;
+  top: 272px;
+  width: 155px;
+  height: 155px;
+	animation: bounceIn 0.3s;
+	animation-delay: 4.2s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s1_14 {
+	position: absolute;
+  left: 1060px;
+  top: 446px;
+  width: 145px;
+  height: 80px;
+	animation: fadeInDownSmall 0.5s;
+	animation-delay: 4.6s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
 
 @keyframes flashLong {
   0%,  100% {
@@ -68,5 +174,47 @@
 
   25%, 50%, 75% {
     opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+@keyframes zoomInLight {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeInDownSmall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -25%, 0);
+    transform: translate3d(0, -25%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
