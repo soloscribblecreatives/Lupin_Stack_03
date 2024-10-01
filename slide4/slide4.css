@@ -28,7 +28,7 @@
   top: 430px;
   width: 360px;
   height: 287px;
-	animation: rotateIn 0.5s;
+	animation: zoomIn 0.5s;
 	animation-delay: 2.3s;
 	animation-fill-mode: both;
 	z-index: 5;
@@ -40,7 +40,7 @@
   top: 475px;
   width: 391px;
   height: 242px;
-	animation: zoomIn 0.7s;
+	animation: lightSpeedInRight 0.5s;
 	animation-delay: 3.3s;
 	animation-fill-mode: both;
 	z-index: 5;
