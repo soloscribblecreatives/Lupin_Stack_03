@@ -36,10 +36,10 @@
 
 .s1_4 {
 	position: absolute;
-  left: 542px;
-  top: 475px;
-  width: 391px;
-  height: 242px;
+  left: 528px;
+  top: 481px;
+  width: 419px;
+  height: 241px;
 	animation: lightSpeedInRight 0.5s;
 	animation-delay: 3.3s;
 	animation-fill-mode: both;
