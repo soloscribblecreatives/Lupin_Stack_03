@@ -202,9 +202,7 @@ if(direction == 'b') {
   
     }
 
-
 }
-
 
 
 $("#wrapper").attr("rel",page_id);
@@ -249,7 +247,7 @@ currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="video"><video id="heart" width="1024" height="768"><source src="slide1/s2.mp4" type="video/mp4"></video></div><div class="button1" onclick="playVid()"></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1024" height="768" alt=""></div><div class="form-container"><form><div class="form-group"><label for="email">Email ID:</label><input type="email" id="email" name="email" placeholder="Enter your email address" required></div><div class="form-group"><label for="whatsapp">WhatsApp Number:</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" pattern="\d{10}" title="Please enter a valid 10-digit number" required></div><div class="form-group"><label for="telephone">Telephone Number:</label><input type="tel"id="telephone" name="telephone" placeholder="Enter your telephone number" pattern="\d{10}" title="Please enter a valid 10-digit number" required></div><button type="submit" class="submit-btn"><img src="slide1/s2.png" alt=""></button></form></div>';
 	break;
 
 }
@@ -403,10 +401,3 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
-
-
-function playVid() {
-	$('.button1').css("display","none");
-	$('.video').css("display","block");
-	document.getElementById("heart").play();
-}
