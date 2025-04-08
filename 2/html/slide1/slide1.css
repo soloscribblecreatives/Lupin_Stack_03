@@ -1,0 +1,23 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.background {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	z-index: 1;
+}
+
+.s2 {
+  position: absolute;
+  left: 29px;
+  top: 219px;
+  width: 618px;
+  height: 210px;
+  animation: zoomIn 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  z-index: 2;
+}

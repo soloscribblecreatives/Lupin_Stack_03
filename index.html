@@ -5,7 +5,7 @@
 <meta http-equiv="cache-control" content="max-age=200"/>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<title>Lupin Connect</title>
+<title>Workflow</title>
 <link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
 
@@ -17,8 +17,8 @@
 <body>
 <div id="wrapper" rel="1">
   <div class="slide_arrow">
-    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="23" height="23" ></div>
-    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="23" height="23"></div>
+    <div class="left_arrow" ><img src="left_arrow.png" alt="previous icon" width="60" height="60" ></div>
+    <div class="right_arrow" ><img src="right_arrow.png" alt="next icon" width="60" height="60"></div>
   </div>
   <div id="main_content"></div>
   <div class="reference active">
@@ -29,12 +29,24 @@
     </div>
     <div class="box_btn"></div>
   </div>
-  <div id="myconsole"></div>
-  <div id="click_through"></div>
 </div>
-
+<div id="myconsole"></div>
+<div id="click_through" > </div>
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
+var startTime = Date.now();
+//step 1:
+var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
+	
+	if(temp == null){			
+			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
+			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
+			//to capture start time of 1st slide in db format
+			var startTime1InDBFormat = currentTimeInDatabaseFormat();
+			//alert(startTime1InDBFormat);
+			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);	
+	}
+//step 1 ends here..
 
 $(document).ready(function(){
   // jQuery(".next").bind(event, function(){
@@ -43,8 +55,26 @@ $(document).ready(function(){
 var selectedContentPath = 'slide1/';
 //  document.getElementById("main_content").innerHTML='<object type="text/html" width="1024px" height="768px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
 
+//custom slide additional code begins here....
 
-$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1024" height="768" alt=""></div><div class="form-container"><form><div class="form-group"><label for="email">Email ID:</label><input type="email" id="email" name="email" placeholder="Enter your email address" required></div><div class="form-group"><label for="whatsapp">WhatsApp Number:</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" pattern="\d{10}" title="Please enter a valid 10-digit number" required></div><div class="form-group"><label for="telephone">Telephone Number:</label><input type="tel"id="telephone" name="telephone" placeholder="Enter your telephone number" pattern="\d{10}" title="Please enter a valid 10-digit number" required></div><button type="submit" class="submit-btn"><img src="slide1/s2.png" alt=""></button></form></div>');
+if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
+	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
+	
+switch(custcomslideid){
+	case 1:
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="1/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>';
+	break;
+}
+
+	$("#main_content").html(content);
+	  localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
+
+//custom slide additional code ends here....	 
+	 
+}else{
+
+$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><iframe src="1/html/index.html" class="background1" height="768" width="1024" frameBorder="0" title="Iframe Example"></iframe>');
+}
 });
 </script> 
 
