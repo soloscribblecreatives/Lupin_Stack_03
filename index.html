@@ -49,7 +49,7 @@ var selectedContentPath = 'slide1/';
 
 $("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div>');
 
-$("#click_through").html('<canvas ontouchend="mouseUp()" id="board" width="564" height="344"></canvas><footer><input type="color" id="colorPicker" value="#000000">'); /* To add blocker on page 1 in flutter */
+$("#click_through").html('<div class="blocker"></div><canvas ontouchend="mouseUp()" id="board" width="564" height="344"></canvas><footer><input type="color" id="colorPicker" value="#000000">'); /* To add blocker on page 1 in flutter */
 runAnimation(); /* runAnimation() is the function called from animate.js file which has minified js */
 
 });
