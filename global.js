@@ -336,7 +336,7 @@ function open_page(url,page_id){
 	document.getElementById("click_through").innerHTML='';
 
 	if(page_id == 1){
-	document.getElementById("click_through").innerHTML='<div class="blocker"></div><canvas ontouchend="mouseUp()" id="board" width="564" height="344"></canvas><footer><input type="color" id="colorPicker" value="#000000">';
+	document.getElementById("click_through").innerHTML='<div class="blocker"></div><canvas ontouchstart="mouseUp()" id="board" width="564" height="344"></canvas><footer><input type="color" id="colorPicker" value="#000000">';
 		}
     if(page_id == 2){
 	document.getElementById("click_through").innerHTML='';
@@ -413,5 +413,5 @@ $(document).ready(function(){
 function mouseUp() {
 	setTimeout(function(){
 		go_nav('f');
-	}, 1000);
+	}, 5000);
 }
