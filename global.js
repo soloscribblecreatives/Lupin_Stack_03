@@ -412,6 +412,6 @@ $(document).ready(function(){
 
 function mouseUp() {
 	setTimeout(function(){
-		go_nav('f');
-	}, 5000);
+		open_page('',2);
+	}, 2000);
 }
