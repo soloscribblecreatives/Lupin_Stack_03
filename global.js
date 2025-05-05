@@ -1,11 +1,11 @@
 /*Code by android developers start here*/
+
 var startLoc = null;
 //var contentName = '152';
 //step 1:-
 var contentName = parseInt(localStorage.getItem("currentbrand"));
 var currentContentId  = parseInt(localStorage.getItem('currentcontent'));
 //ends
-
 checkClickThrough();
 
 document.getElementById("main_content").addEventListener("touchmove", touchHandler, false);
@@ -69,6 +69,7 @@ function touchHandler(e) {
 
 		$("#main_content").swipe({
 	   swipeLeft:function(event, direction, distance, duration, fingerCount) {
+		
 		//alert("swipeleft");
 		//myconsole("swipeleft");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -82,6 +83,7 @@ function touchHandler(e) {
 	  },
 
 	  swipeRight:function(event, direction, distance, duration, fingerCount) {
+		
 			//alert("swiperight");
 		//myconsole("swiperight");
 		var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -100,10 +102,7 @@ function touchHandler(e) {
         //Default is 75px, set to 0 for demo so any distance triggers swipe
          threshold:0
 	});
-
-
 });
-
 
 function go_nav(direction) {
 var page_id =  parseInt($("#wrapper").attr("rel"));
@@ -159,10 +158,10 @@ if(direction == 'b') {
 }else {
 	
 
-	if(page_id <= 3){
+	if(page_id <= 5){
 		page_id = page_id + 1;
 		//alert(page_id);
-		if(page_id == 4){
+		if(page_id == 6){
             flag=1;
         }
 	}
@@ -240,24 +239,32 @@ var pg_content = set_pg_content(page_id);
 	 	}); */
 		
 	}
-	 checkClickThrough(page_id);
+	 checkClickThrough();
 }
 
 function set_pg_content(pg_id){
+//step 6:-
+//console.log("++++++++pg_id++++"+pg_id+"+++++++currentslide++++++"+localStorage.getItem("currentslide")+"++++++previousslide++++++"+localStorage.getItem("previousslide"));
+		
 $(".reference").removeClass("active");
 currentSlide();
 var selectedContentPath='';
 switch(pg_id){
 	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide1/1.jpg" width="1024" height="768" alt=""></div><script>runAnimation();</script>';
+	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1"><img src="slide1/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide1/s2.png"/></div><div class="s3"><img src="slide1/s3.png"/></div><div class="s4"><img src="slide1/s4.png"/></div><div class="s5"><img src="slide1/s5.png"/></div><div class="s6"><img src="slide1/s6.png"/></div><div class="s7"><img src="slide1/s7.png"/></div><div class="s8"><img src="slide1/s8.png"/></div><div class="s9"><img src="slide1/s9.png"/></div><div class="s10"><img src="slide1/s10.png"/></div>';
 	break;
 	case 2:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide2/1.jpg" width="1024" height="768" alt=""></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide2/slide2.css" media="screen"/><div class="s1"><img src="slide2/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide2/s2.png"/></div><div class="s3"><img src="slide2/s3.png"/></div><div class="s4"><img src="slide2/s4.png"/></div><div class="s5"><img src="slide2/s5.png"/></div><div class="s6"><img src="slide2/s6.png"/></div>';
 	break;
-	case 3:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="background"><img src="slide3/1.jpg" width="1024" height="768" alt=""></div>';
+    case 3:
+	content='<link rel="stylesheet" type="text/css" href="slide3/slide3.css" media="screen"/><div class="s1"><img src="slide3/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide3/s2.png"/></div><div class="s3"><img src="slide3/s3.png"/></div><div class="s4"><img src="slide3/s4.png"/></div><div class="s5"><img src="slide3/s5.png"/></div><div class="s6"><img src="slide3/s6.png"/></div>';
 	break;
-
+    case 4:
+	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s1"><img src="slide4/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide4/s2.png"/></div><div class="s3"><img src="slide4/s3.png"/></div><div class="s4"><img src="slide4/s4.png"/></div><div class="s5"><img src="slide4/s5.png"/></div><div class="s6"><img src="slide4/s6.png"/></div>';
+	break;
+	case 5:
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s1"><img src="slide5/s1.png" width="1024" height="768" alt=""/></div><div class="s2"><img src="slide5/s2.png"/></div><div class="s3"><img src="slide5/s3.png"/></div>';
+	break;
 }
 
 return content;
@@ -270,6 +277,7 @@ function showDiv() {
 function showDiv2() {
    document.getElementById('welcomeDiv2').style.display = "block";
 }
+
 
 function open_page(url,page_id){
 	 //alert("===openpage====");
@@ -297,13 +305,13 @@ function open_page(url,page_id){
   };
 
 	//window.messageHandler.postMessage(JSON.stringify(params)); //pageswipe
-
+	
 	 $("#wrapper").attr("rel",page_id);
 	 var content="";
 	 var pg_content = set_pg_content(page_id);
 
 	 	$("#main_content").html(pg_content);
-/* 
+
 	 if(page_id==4){
 		$(".box2").click(function(event) {
 			open_page("",5)
@@ -326,21 +334,22 @@ function open_page(url,page_id){
 		$(".box8").click(function(event) {
 	 		open_page("",11)
 	 	});
-	 } */
+	 }
 	  checkClickThrough();
 	}
 
-	function checkClickThrough(page_id){
+	function checkClickThrough(){
 	var currentslide=localStorage.getItem("currentslide");
 	//alert(currentslide);
 	document.getElementById("click_through").innerHTML='';
 
-	if(page_id == 1){
-	document.getElementById("click_through").innerHTML='<div class="blocker"></div><canvas ontouchstart="mouseUp()" id="board" width="564" height="344"></canvas><footer><input type="color" id="colorPicker" value="#000000">';
-		}
-    if(page_id == 2){
+	if(currentslide == 1){
 	document.getElementById("click_through").innerHTML='';
 		}
+    if(currentslide == 2){
+	document.getElementById("click_through").innerHTML='';
+		}
+
 	}
 
 	function checkBtns(refNum){
@@ -397,8 +406,6 @@ function currentTimeInDatabaseFormat(){//to get current time in dd-mm-yyyy hh:mm
 	return duration;
 }
 
-// new js
-
 $(document).ready(function(){
 	$('body').on('click','.touchbtn',function(){
 		$('.right_arrow').trigger( "click" );
@@ -409,9 +416,3 @@ $(document).ready(function(){
 		$('.touchbtn').css("display","block");
 	})
 })
-
-function mouseUp() {
-	setTimeout(function(){
-		open_page('',2);
-	}, 2000);
-}
